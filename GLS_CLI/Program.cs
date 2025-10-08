@@ -25,10 +25,17 @@ namespace GLS_CLI
             int kulonbozoSoforok = lista.Select(a => a.Sofor).Distinct().Count();
             Console.WriteLine($"\tKülönböző sofőrök száma: {kulonbozoSoforok}");
 
-            // --- Task 4 ---
             Console.WriteLine("4. Feladat:");
             int osszesKm = lista.Sum(a => a.NapiKilometer);
             Console.WriteLine($"\tAz összes megtett kilométer: {osszesKm} km");
+
+            // --- Task 6 ---
+            Console.WriteLine("6. Feladat:");
+            double osszesFogyasztas = lista.Sum(a => a.Fogyasztas);
+            double atlagosFogyasztas =
+                AutoAdatok.AtlagFogyasztas(osszesFogyasztas, osszesKm);
+
+            Console.WriteLine($"\tÁtlagos fogyasztás: {atlagosFogyasztas} liter/100 km");
         }
     }
 }
