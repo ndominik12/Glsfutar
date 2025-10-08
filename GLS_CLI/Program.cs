@@ -21,13 +21,14 @@ namespace GLS_CLI
             Console.WriteLine("2. Feladat:");
             Console.WriteLine($"\tAz autó használatban töltött napjainak száma: {lista.Count}");
 
-            // --- Task 3 ---
             Console.WriteLine("3. Feladat:");
-            int kulonbozoSoforok = lista
-                .Select(a => a.Sofor)
-                .Distinct()
-                .Count();
+            int kulonbozoSoforok = lista.Select(a => a.Sofor).Distinct().Count();
             Console.WriteLine($"\tKülönböző sofőrök száma: {kulonbozoSoforok}");
+
+            // --- Task 4 ---
+            Console.WriteLine("4. Feladat:");
+            int osszesKm = lista.Sum(a => a.NapiKilometer);
+            Console.WriteLine($"\tAz összes megtett kilométer: {osszesKm} km");
         }
     }
 }
