@@ -29,13 +29,21 @@ namespace GLS_CLI
             int osszesKm = lista.Sum(a => a.NapiKilometer);
             Console.WriteLine($"\tAz összes megtett kilométer: {osszesKm} km");
 
-            // --- Task 6 ---
             Console.WriteLine("6. Feladat:");
             double osszesFogyasztas = lista.Sum(a => a.Fogyasztas);
             double atlagosFogyasztas =
                 AutoAdatok.AtlagFogyasztas(osszesFogyasztas, osszesKm);
-
             Console.WriteLine($"\tÁtlagos fogyasztás: {atlagosFogyasztas} liter/100 km");
+
+            // --- Task 7 ---
+            Console.WriteLine("7. Feladat:");
+            var legtobbetVezeto = lista
+                .GroupBy(a => a.Sofor)
+                .Select(g => new { Sofor = g.Key, Napok = g.Count() })
+                .OrderByDescending(x => x.Napok)
+                .First();
+
+            Console.WriteLine($"\tA legtöbbet vezető sofőr: {legtobbetVezeto.Sofor}, napok száma: {legtobbetVezeto.Napok}");
         }
     }
 }
