@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GLS_CLI
 {
@@ -24,6 +20,7 @@ namespace GLS_CLI
             Fogyasztas = int.Parse(adatok[4]);
         }
 
+        // --- Task 5: Függvénykészítés ---
         public static double AtlagFogyasztas(double osszFogyasztas, double osszKm)
         {
             if (osszKm <= 0 || osszFogyasztas < 0)
