@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GLS_CLI
 {
@@ -22,6 +20,14 @@ namespace GLS_CLI
 
             Console.WriteLine("2. Feladat:");
             Console.WriteLine($"\tAz autó használatban töltött napjainak száma: {lista.Count}");
+
+            // --- Task 3 ---
+            Console.WriteLine("3. Feladat:");
+            int kulonbozoSoforok = lista
+                .Select(a => a.Sofor)
+                .Distinct()
+                .Count();
+            Console.WriteLine($"\tKülönböző sofőrök száma: {kulonbozoSoforok}");
         }
     }
 }
