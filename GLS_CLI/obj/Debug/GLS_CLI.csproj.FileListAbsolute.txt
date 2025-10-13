@@ -1,0 +1,7 @@
+U:\12asztali\GLS_CLI\GLS_CLI\bin\Debug\GLS_CLI.exe.config
+U:\12asztali\GLS_CLI\GLS_CLI\bin\Debug\GLS_CLI.exe
+U:\12asztali\GLS_CLI\GLS_CLI\bin\Debug\GLS_CLI.pdb
+U:\12asztali\GLS_CLI\GLS_CLI\obj\Debug\GLS_CLI.csproj.AssemblyReference.cache
+U:\12asztali\GLS_CLI\GLS_CLI\obj\Debug\GLS_CLI.csproj.CoreCompileInputs.cache
+U:\12asztali\GLS_CLI\GLS_CLI\obj\Debug\GLS_CLI.exe
+U:\12asztali\GLS_CLI\GLS_CLI\obj\Debug\GLS_CLI.pdb
